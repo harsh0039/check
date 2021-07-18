@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 4 Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Righteous&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div class="jumbotron">
+		<center>
+		<div class="btn-group">
+			<div class="btn" type="button" id="all1">ALL</div>
+			<div class="btn" type="button" id="free1">FREE</div>
+			<div class="btn" type="button" id="paid1">PAID</div>
+        	</div>
+         </center>
+
+         <div class="row" id="all">
+         	<div class="col-md-4"><img src="images/slider1.jpg" width="100%" height="70%"></div>
+         	<div class="col-md-4"><img src="images/slider2.jpg" width="100%" height="70%"></div>
+         	<div class="col-md-4"><img src="images/about-header.jpg" width="100%" height="70%"></div>
+           <div id="box" style="width:30.5%;height:190px;border:1px solid red;position:absolute;left:30px;background-color: rgba(0,0,0,0.4);display:none;"></div>
+
+         </div>
+
+          <div class="row" id="free">
+         	<div class="col-md-4"><img src="images/about.png" width="100%" height="70%"></div>
+         	<div class="col-md-4"><img src="images/post-1.jpg" width="100%" height="70%"></div>
+         	<div class="col-md-4"><img src="images/post-2.jpg" width="100%" height="70%"></div>
+
+         </div>
+
+          <div class="row" id="paid">
+         	<div class="col-md-4"><img src="images/post-3.jpg" width="100%" height="30%"></div>
+         	<div class="col-md-4"><img src="images/call-to-action-bg.jpg" width="100%" height="30%"></div>
+         	<div class="col-md-4"><img src="images/member.jpg" width="100%" height="30%"></div>
+
+         </div>
+
+
+
+	</div>
+  <div style="width:20%;height:200px;border:1px sloid red;"></div>
+
+
+<script>
+	
+$(document).ready(function(){
+
+	$("#free1").click(function(){
+		$("#all,#paid").hide(300);
+		$("#free").show();
+	});
+
+	$("#paid1").click(function(){
+		$("#all,#free").hide(300);
+		$("#paid").show(300);
+	});
+
+	$("#all1").click(function(){
+		$("#all,#free,#paid").show(300);
+    
+	});
+});
+
+
+</script>
+
+</body>
+</html>
